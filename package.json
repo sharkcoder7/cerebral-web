@@ -1,8 +1,5 @@
 {
   "name": "grunt-with-node-sass",
-  "scripts": {
-    "start": "node server.js"
-  },
   "devDependencies": {
     "autoprefixer-core": "^6.0.1",
     "grunt": "^1.0.1",
@@ -24,5 +21,8 @@
     "grunt-svgmin": "^5.0.0",
     "grunt-svgstore": "1.0.0",
     "load-grunt-tasks": "3.5.2"
+  },
+  "dependencies": {
+    "static-server": "^2.2.1"
   }
 }
