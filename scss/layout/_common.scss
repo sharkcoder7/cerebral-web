@@ -1,0 +1,60 @@
+#wrapper {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+}
+
+.container {
+	max-width: 1330px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+body {
+	font-weight: 500;
+	
+	@include media('>=desktop') {
+		font-size: 20px;
+		line-height: 1.5;
+	}
+
+	@include media('>=widescreen') {
+		font-size: 23px;
+		line-height: 1.74;
+	}
+}
+
+h1, h2, h3, .h1, .h2, .h3 {
+	line-height: 1;
+	letter-spacing: -1px;
+}
+
+h1, .h1 {
+	@include media('>=desktop') {
+		font-size: 40px;
+	}
+
+	@include media('>=widescreen') {
+		font-size: 60px;
+	}
+}
+
+h3, .h3 {
+	@include media('>=tablet') {
+		font-size: 24px;
+	}
+
+	@include media('>=widescreen') {
+		font-size: 30px;
+	}
+}
+
+.align-center {
+	text-align: center;
+}
+
+.image-holder {
+	img {
+		width: 100%;
+	}
+}

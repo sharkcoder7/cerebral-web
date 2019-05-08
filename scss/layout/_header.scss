@@ -1,0 +1,53 @@
+.header {
+	padding: 30px 0;
+	position: relative;
+
+	@include media('>=tablet') {
+		padding: 0;
+	}
+
+	.header-frame {
+		@include media('>=tablet') {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+			padding: 60px 0 0;
+			position: relative;
+		}
+
+		@include media('>=widescreen') {
+			padding: 72px 15px 0;
+		}
+	}
+}
+
+.logo {
+	width: 150px;
+	height: auto;
+
+	@include media('>=tablet') {
+		width: 182px;
+		height: 38px;
+		position: absolute;
+		top: 65px;
+		left: 0;
+	}
+
+	@include media('>=desktop') {
+		top: 73px;
+	}
+
+	@include media('>=widescreen') {
+		top: 95px;
+		left: 12px;
+	}
+
+	a {
+		display: block;
+	}
+
+	img {
+		width: 100%;
+	}
+}

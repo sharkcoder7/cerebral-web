@@ -1,0 +1,50 @@
+.btn {
+	display: inline-block;
+	vertical-align: top;
+	font-weight: 700;
+	border-radius: 61px;
+	padding: $btn-padding;
+	letter-spacing: -0.39px;
+	@include animate(color background opacity);
+
+	@include media('>=phone') {
+		padding: 17px 28px; 
+	}
+
+	@include media('>=desktop') {
+		font-size: 22px;
+		line-height: 26px;
+	}
+
+	&.xlarge {
+		@include media('>=desktop') {
+			padding: 35px 70px;
+		}
+	}
+
+	&.xlarge-outline {
+		@include media('>=desktop') {
+			padding: 32px 91px;
+		}
+	}
+
+	&.btn-primary {
+		background: $btn-background;
+		color: $btn-color;
+
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+
+	&.btn-outline {
+		color: $dark-blue;
+		background-color: transparent;
+		border: 3px solid $dark-blue;
+
+		&:hover {
+			background: $btn-background;
+			color: $btn-color;
+		}
+	}
+}
