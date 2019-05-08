@@ -1,7 +1,7 @@
 var StaticServer = require('static-server');
 var server = new StaticServer({
   rootPath: '.',            // required, the root of the server file tree
-  port: 80,               // required, the port to listen
+  port: process.env.PORT || 3000,               // required, the port to listen
   templates: {
     index: 'homepage.html',      // optional, defaults to 'index.html'
   }
