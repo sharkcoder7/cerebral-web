@@ -23,6 +23,8 @@
     "load-grunt-tasks": "3.5.2"
   },
   "dependencies": {
-    "static-server": "^2.2.1"
+    "connect-wwwhisper": "*",
+    "dotenv": "^8.0.0",
+    "express": "^4.16.4"
   }
 }

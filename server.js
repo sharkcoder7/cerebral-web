@@ -1,33 +1,21 @@
-var StaticServer = require('static-server');
-var server = new StaticServer({
-  rootPath: '.',            // required, the root of the server file tree
-  port: process.env.PORT || 3000,               // required, the port to listen
-  templates: {
-    index: 'homepage.html',      // optional, defaults to 'index.html'
-  }
-});
- 
-server.start(function () {
-  console.log('Server listening to', server.port);
-});
- 
-server.on('request', function (req, res) {
-  // req.path is the URL resource (file name) from server.rootPath
-  // req.elapsedTime returns a string of the request's elapsed time
-});
- 
-server.on('symbolicLink', function (link, file) {
-  // link is the source of the reference
-  // file is the link reference
-  console.log('File', link, 'is a link to', file);
-});
- 
-server.on('response', function (req, res, err, file, stat) {
-  // res.status is the response status sent to the client
-  // res.headers are the headers sent
-  // err is any error message thrown
-  // file the file being served (may be null)
-  // stat the stat of the file being served (is null if file is null)
- 
-  // NOTE: the response has already been sent at this point
-});
+require('dotenv').config()
+
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
+
+var wwwhisper = require('connect-wwwhisper');
+// app holds a reference to express or connect framework, it
+// may be named differently in your source file.
+app.use(wwwhisper());
+
+app.use(express.static(__dirname + '/'));
+
+//Route setup
+app.get('/', (req, res) => {
+  res.sendfile('homepage.html')
+})
+//Start server
+app.listen(port, (req, res) => {
+console.log(`server listening on port: ${port}`)
+ });
