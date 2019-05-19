@@ -662,8 +662,8 @@ input[type="submit"] {
 }
 
 .container {
-	max-width: 1330px;
-	padding: 0 15px;
+	max-width: 1200px;
+	padding: 0 50px;
 	margin: 0 auto;
 }
 
@@ -677,7 +677,6 @@ h3,
 .h1,
 .h2,
 .h3 {
-	line-height: 1;
 	letter-spacing: -1px;
 }
 
@@ -730,38 +729,76 @@ h3,
 	opacity: .7;
 }
 
-.social-links {
-	display: -webkit-box;
-	display: -ms-flexbox;
+.footer .footer-frame {
+	flex-direction: column;
+}
+
+.footer .wait-list {
+	margin-top: 50px;
 	display: flex;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.footer .wait-list h3 {
+	color: white;
+}
+
+.footer .wait-list button {
+	background: transparent;
+	height: 60px;
+	text-transform: uppercase;
+	min-width: 120px;
+	margin-top: 10px;
+	transition: ease-in-out 0.3s;
+}
+
+.footer .wait-list button:hover {
+	background: white;
+	color: #250044;
+}
+
+.footer .wait-list input {
+	height: 60px;
+	color: #999999;
+}
+
+.footer .wait-list .form {
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 }
 
-.social-links li {
-	margin-bottom: 5px;
+.footer .wait-list i {
+	font-size: 12pt;
+	margin-top: 10px;
 }
 
-.social-links li + li {
-	margin-left: 15px;
+.footer .legal {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: .9em;
+	text-align: center;
 }
 
-.social-links a {
-	color: #fff;
-	-webkit-transition: opacity .3s ease-in-out;
-	transition: opacity .3s ease-in-out;
+.footer .legal span {
+	margin-bottom: 20px;
 }
 
-.social-links a:hover {
-	opacity: .7;
+.footer .legal a {
+	color: white;
 }
 
-.social-links [class^="icon-"],
-.social-links [class*=" icon-"] {
-	font-size: 40px;
+.footer .legal a.privacy {
+	margin-left: 10px;
+	padding-left: 10px;
+	border-left: white solid 1px;
+}
+
+.footer .legal a:hover {
+	color: #bcb4c6;
 }
 
 .top-showcase {
@@ -857,8 +894,8 @@ h3,
 
 .our-specifications .bg-stretch {
 	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	background-size: 100% 100%;
+	background-position: 50% 110%;
+	background-size: 100% 130%;
 }
 
 .our-specifications .inner-hold {
@@ -1090,17 +1127,24 @@ h3,
 }
 
 @media (min-width: 576px) {
-	.footer .footer-navigation-wrapper {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
+
+	.footer .wait-list .form {
+		flex-direction: row;
+	}
+
+	.footer .wait-list .form button {
+		margin-top: 0;
+		margin-left: 10px;
 	}
 
 	.footer-nav {
-		width: 33.33%;
 		padding: 0 15px;
+	}
+
+	.our-specifications .bg-stretch {
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
 	}
 
 	.top-showcase .inner-hold {
@@ -1151,6 +1195,20 @@ h3,
 		position: relative;
 	}
 
+	.footer-nav h3 {
+		max-width: 220px;
+	}
+
+	.footer .footer-navigation-wrapper {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		flex: 1;
+		justify-content: space-between;
+	}
+
 	.logo {
 		width: 182px;
 		height: 38px;
@@ -1161,7 +1219,7 @@ h3,
 
 	h3,
 	.h3 {
-		font-size: 24px;
+		font-size: 1.1em;
 	}
 
 	.footer .footer-frame {
@@ -1173,7 +1231,6 @@ h3,
 	}
 
 	.footer .footer-navigation-wrapper {
-		width: 77%;
 		margin: 0 -15px;
 	}
 
@@ -1198,6 +1255,16 @@ h3,
 
 	.footer-nav {
 		text-align: left;
+	}
+
+	.footer .legal {
+		flex-direction: row;
+	}
+
+	.footer .legal .terms {
+		margin-left: 10px;
+		padding-left: 10px;
+		border-left: white solid 1px;
 	}
 
 	.top-showcase .image-holder {
@@ -1280,20 +1347,12 @@ h3,
 		flex-wrap: wrap;
 		-webkit-box-pack: center;
 		-ms-flex-pack: center;
-		justify-content: center;
 		margin: 0 -15px;
+		justify-content: center;
 	}
 
-	.how-it-works .column {
-		width: 33.33%;
-		padding-left: 15px;
-		padding-right: 15px;
-		text-align: left;
-	}
-
-	.how-it-works .image-holder {
-		width: 200px;
-		height: 200px;
+	.how-it-works .column-holder .column {
+		max-width: 500px;
 	}
 
 	.visit-online .inner-hold {
@@ -1411,7 +1470,8 @@ h3,
 
 	h1,
 	.h1 {
-		font-size: 40px;
+		font-size: 2.2em;
+		line-height: 1.15;
 	}
 
 	.footer {
@@ -1445,7 +1505,7 @@ h3,
 	}
 
 	.top-showcase h1 {
-		margin-bottom: 76px;
+		margin-bottom: 60px;
 	}
 
 	.top-showcase p {
@@ -1476,7 +1536,7 @@ h3,
 	}
 
 	.our-specifications .inner-hold {
-		padding: 94px 30px 70px;
+		padding: 94px 30px 70px 100px;
 	}
 
 	.our-specifications .title-hold {
@@ -1484,8 +1544,24 @@ h3,
 	}
 
 	.our-specifications .text-hold {
-		font-size: 24px;
-		line-height: 2;
+		font-size: 1.1em;
+		line-height: 1.5;
+	}
+
+	.how-it-works .column-holder {
+		justify-content: space-between;
+	}
+
+	.how-it-works .column {
+		width: 300px;
+		padding-left: 15px;
+		padding-right: 15px;
+		text-align: left;
+	}
+
+	.how-it-works .image-holder {
+		width: 200px;
+		height: 200px;
 	}
 
 	.how-it-works {
@@ -1501,8 +1577,6 @@ h3,
 	}
 
 	.how-it-works .image-holder {
-		width: 245px;
-		height: 245px;
 		margin-bottom: 32px;
 	}
 
@@ -1511,8 +1585,8 @@ h3,
 	}
 
 	.visit-online .image-holder {
-		width: 600px;
 		height: auto;
+		flex: 1;
 	}
 
 	.visit-online h2 {
@@ -1533,98 +1607,8 @@ h3,
 		line-height: 26px;
 	}
 
-	.btn.xlarge {
-		padding: 35px 70px;
-	}
-
-	.btn.xlarge-outline {
-		padding: 32px 91px;
-	}
-}
-
-@media (min-width: 1200px) {
-	.header .header-frame {
-		padding: 72px 15px 0;
-	}
-
-	.logo {
-		top: 95px;
-		left: 12px;
-	}
-
-	body {
-		font-size: 23px;
-		line-height: 1.74;
-	}
-
-	h1,
-	.h1 {
-		font-size: 60px;
-	}
-
-	h3,
-	.h3 {
-		font-size: 30px;
-	}
-
-	.social-links li + li {
-		margin-left: 46px;
-	}
-
-	.top-showcase .content-holder {
-		padding: 0 70px 0 0;
-		margin-top: -30px;
-	}
-
-	.brief-info {
-		padding: 188px 0 170px;
-	}
-
-	.brief-info .image-holder {
-		width: 624px;
-	}
-
-	.brief-info .inner-hold {
-		padding: 0 14px;
-	}
-
-	.our-specifications .text-hold {
-		font-size: 30px;
-	}
-
-	.how-it-works .column-holder {
-		margin: 0 -38px;
-	}
-
-	.how-it-works .column {
-		padding-left: 55px;
-		padding-right: 55px;
-	}
-
-	.visit-online .inner-hold {
-		margin: 0 -60px;
-	}
-
-	.visit-online .image-holder {
-		width: 870px;
-		height: 588px;
-	}
-
-	.visit-online .content-holder {
-		margin: 10px 0 0 -180px;
-		padding: 0 110px;
-	}
-
-	.nav-child {
-		margin: 0 -30px;
-	}
-
-	.nav-drop {
-		margin: 0 -41px 63px;
-	}
-
-	.nav-drop li {
-		padding: 0 29px;
+	.btn.xlarge, .btn.xlarge-outline {
+		padding: 25px 60px;
 	}
 }
 
@@ -1634,7 +1618,7 @@ h3,
 	}
 
 	.brief-info .content-holder {
-		margin: 10px -30px 0 -10px;
+		margin: 0 0 0 20px;
 	}
 }
 
@@ -1653,4 +1637,4 @@ h3,
 		transition: left .3s ease-in-out;
 	}
 }
-
+
