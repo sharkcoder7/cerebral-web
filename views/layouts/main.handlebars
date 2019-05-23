@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cerebral</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+	<link media="all" rel="stylesheet" href="css/main.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js" defer><\/script>')</script>
+	<script src="js/jquery.main.js" defer></script>
+</head>
+<body>
+	<div id="wrapper">
+		<header id="header" class="header">
+			<div class="container">
+				<a href="#" class="nav-opener"><span>Menu</span></a>
+				<div class="header-frame">
+					<div class="logo">
+						<a href="#"><img src="images/logo.svg" alt="Cerebral" width="182"></a>
+					</div>
+					<nav class="nav">
+						<ul class="nav-drop">
+							<li><a href="#">For Therapists</a></li>
+							<li><a class="btn btn-primary" href="{{ APP_BASE_URL }}/start">Get Started</a></li>
+							<li><a href="#">Member login</a></li>
+						</ul>
+						<nav class="secondary-navigation">
+							<ul class="nav-child">
+								<li><a href="#">Depression and Anxiety</a></li>
+								<li><a href="#">Sleep</a></li>
+							</ul>
+						</nav>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<main id="main">
+			{{{body}}}
+		</main>
+		<footer id="footer" class="footer">
+			<div class="container">
+				<div class="footer-frame">
+					<div class="footer-navigation-wrapper">
+						<div class="footer-nav align-center">
+							<h3>Cerebral<br/>Support</h3>
+							<ul>
+								<li><a href="faq">FAQ</a></li>
+								<li><a href="how_it_works">How It Works</a></li>
+								<li><a href="pricing">Pricing</a></li>
+								<li><a href="contact_us">Contact Us</a></li>
+							</ul>
+						</div>
+						<div class="footer-nav align-center">
+							<h3>Depression & Anxiety medication</h3>
+							<ul>
+								<li><a href="#">Sertraline</a></li>
+								<li><a href="#">Fluoxetine</a></li>
+								<li><a href="#">Citalopram</a></li>
+								<li><a href="#">Escitalopram</a></li>
+								<li><a href="#">Bupropion</a></li>
+							</ul>
+						</div>
+						<div class="footer-nav align-center">
+							<h3>Insomnia medication</h3>
+							<ul>
+								<li><a href="#">Trazadone</a></li>
+								<li><a href="#">Melatonin</a></li>
+								<li><a href="#">Hydroxyzine</a></li>
+								<li><a href="#">Mirtazapine</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="align-center wait-list">
+						<h3>Sign up for our news letter</h3>
+						<div class="form">
+							<input type="email" placeholder="e-mail address" />
+							<button>sign up</button>
+						</div>
+						<i>We respect your privacy</i>
+					</div>
+					<div class="legal">
+						<span>© 2019 Cerebral Inc. All rights reserved.</span>
+						<div>
+							<a class="terms" href="#">Terms &amp; Conditions</a>
+							<a class="privacy" href="#">Privacy Policy</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
