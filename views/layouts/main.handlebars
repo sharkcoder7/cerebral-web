@@ -23,13 +23,13 @@
 					<nav class="nav">
 						<ul class="nav-drop">
 							<li><a href="#">For Therapists</a></li>
-							<li><a class="btn btn-primary" href="{{ APP_BASE_URL }}/start">Get Started</a></li>
-							<li><a href="#">Member login</a></li>
+							<li><a class="btn btn-primary" href="{{ APP_BASE_URL }}/patient/qualification">Get Started</a></li>
+							<li><a href="{{ APP_BASE_URL }}/patient/sign_in">Member login</a></li>
 						</ul>
 						<nav class="secondary-navigation">
 							<ul class="nav-child">
-								<li><a href="#">Depression and Anxiety</a></li>
-								<li><a href="#">Sleep</a></li>
+								<li><a href="{{ APP_BASE_URL }}/patient/qualification?service_line=dep_anx">Depression and Anxiety</a></li>
+								<li><a href="{{ APP_BASE_URL }}/patient/qualification?service_line=ins">Sleep</a></li>
 							</ul>
 						</nav>
 					</nav>
